@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "CreatePlayer";
+}
+
+<h2 style="position:relative;left:380px;">Create Player</h2>
+
+<h2>@ViewBag.Message</h2>
+
+<form action="CreatePlayer" method="post" >
+
+    <div class="center-block container-fluid text-center" style="position:center">
+        <p>Player Name: <input type="text" name="name" /></p>
+        <p>Hit Points: <input type="number" name="hp" /></p>
+        <p>Lives: <input type="number" name="lives" /></p>
+        <p>Attack: <input tpye="number" name="attack" /></p>
+        <p>Gold: <input type="number" name="gold" /></p>
+        <input type="submit" value="Create Player" />
+    </div>
+
+</form>
+
+<style>
+    form{
+        width: auto;
+        display:block;
+        text-align:center;
+    }
+    div{
+        
+    }
+</style>

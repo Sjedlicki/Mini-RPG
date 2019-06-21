@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "CreateItem";
+}
+
+<h2>Create Item</h2>
+
+<h2 sytle="color:red;">@ViewBag.Message</h2>
+
+<form action="CreateItem" method="post">
+    <p>Item Name:<input type="text" name="itemName" required /></p>
+    <p>Attack Value: <input type="number" name="attack" /></p>
+    <input type="submit" />
+</form>

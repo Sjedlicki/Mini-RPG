@@ -1,0 +1,23 @@
+﻿
+
+@{
+    ViewBag.Title = "PickFighters";
+}
+
+<h2>Select Your Fighters!</h2>
+
+<form action="Fight">
+    @foreach (var player in Model.Players)
+    {
+        <input type="radio" name="@player.PlayerId" />@player.Name
+    }
+    <input type="submit" value="Select Player" />
+</form>
+
+<form action="Fight">
+    @foreach (var monster in Model.Monsters)
+    {
+        <input type="radio" name="@monster.MonsterId" />@monster.Name
+    }
+    <input type="submit" value="Select Monster" />
+</form>

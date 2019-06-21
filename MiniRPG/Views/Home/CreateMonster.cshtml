@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "CreateMonster";
+}
+
+<h2>CreateMonster</h2>
+
+<h1 style="color:red; text-align:center;">@ViewBag.Message</h1>
+
+<form action="CreateMonster" method="post" style="text-align:center;">
+    <p>Monster Name: <input type="text" name="name" required/></p>
+    <p>Hit Points: <input type="number" name="hp" /></p>
+    <p>Attack: <input tpye="number" name="attack" /></p>
+    <p>Loot Dropped: <input type="text" name="lootdropped" /></p>
+    <input type="submit" value="Create Monster" />
+</form>
