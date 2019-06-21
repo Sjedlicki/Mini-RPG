@@ -30,5 +30,7 @@ namespace MiniRPG.Models
             Attack = attack;
             LootDropped = lootDropped;
         }
+
+        public Monster() { }
     }
 }

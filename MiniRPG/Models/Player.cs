@@ -43,5 +43,7 @@ namespace MiniRPG.Models
             Attack = attack;
             Gold = gold;
         }
+
+        public Player() { }
     }
 }

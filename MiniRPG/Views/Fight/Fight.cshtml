@@ -3,5 +3,55 @@
     ViewBag.Title = "Fight";
 }
 
-<h2>Fight</h2>
+<h2 style="text-align:center; color:red;">Fight</h2>
 
+
+<div style="padding-left:270px;">
+    <table class="table-bordered" style="display:inline-block; text-align:center; margin-right:100px;">
+        <colgroup>
+            <col width="100" />
+            <col width="100" />
+            <col width="100" />
+        </colgroup>
+        <tr>
+            <th>Player</th>
+            <td>@ViewBag.Player.Name</td>
+        </tr>
+        <tr>
+            <th>HP</th>
+            <td>@ViewBag.Player.HP</td>
+        </tr>
+        <tr>
+            <th>Attack</th>
+            <td>@ViewBag.Player.Attack</td>
+        </tr>
+    </table>
+    @*<form>
+        <button class="btn-danger" type="button" onclick="" >ATTACK!</button>
+    </form>*@
+    <table class="table-bordered" style="display:inline-block;text-align:center;margin-left:100px;">
+        <colgroup>
+            <col width="100" />
+            <col width="100" />
+            <col width="100" />
+        </colgroup>
+        <tr>
+            <th>Monster</th>
+            <td>@ViewBag.Monster.Name</td>
+        </tr>
+        <tr>
+            <th>HP</th>
+            <td>@ViewBag.Monster.HP</td>
+        </tr>
+        <tr>
+            <th>Attack</th>
+            <td>@ViewBag.Monster.Attack</td>
+        </tr>
+    </table>
+</div>
+
+<style>
+    th{
+        text-align:center;
+    }
+</style>

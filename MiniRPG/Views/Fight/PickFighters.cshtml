@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<MiniRPG.Models.FighterDb>
 
 @{
     ViewBag.Title = "PickFighters";
@@ -6,18 +6,23 @@
 
 <h2>Select Your Fighters!</h2>
 
-<form action="Fight">
-    @foreach (var player in Model.Players)
+@if(ViewBag.Player != null && ViewBag.Monster != null)
+{
+    <a href="../Fight/Fight">Battle!!</a>
+}
+
+<form action="PickFighters" method="post">
+    @foreach (var player in ViewBag.Players)
     {
-        <input type="radio" name="@player.PlayerId" />@player.Name
+        <input type="radio" name="playerId" value="@player.PlayerId" /> @player.Name
     }
     <input type="submit" value="Select Player" />
 </form>
 
-<form action="Fight">
-    @foreach (var monster in Model.Monsters)
+<form action="PickFighters" method="post">
+    @foreach (var monster in ViewBag.Monsters)
     {
-        <input type="radio" name="@monster.MonsterId" />@monster.Name
+        <input type="radio" name="monsterId" value="@monster.MonsterId" />@monster.Name
     }
     <input type="submit" value="Select Monster" />
 </form>

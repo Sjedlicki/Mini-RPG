@@ -18,11 +18,39 @@ namespace MiniRPG.Controllers
 
         public ActionResult PickFighters()
         {
-            return View(db);
+            ViewBag.Players = db.Players.ToList();
+            ViewBag.Monsters = db.Monsters.ToList();
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult PickFighters(int? playerId, int? monsterId)
+        {
+            ViewBag.Players = db.Players.ToList();
+            ViewBag.Monsters = db.Monsters.ToList();
+
+            if (playerId != null)
+            {
+                Session["Player"] = db.Players.Find(playerId);
+                
+            }
+            if (monsterId != null)
+            {
+                Session["Monster"] = db.Monsters.Find(monsterId);
+
+            }
+
+            ViewBag.Player = Session["Player"];
+            ViewBag.Monster = Session["Monster"];
+
+            return View();
         }
 
         public ActionResult Fight()
         {
+            ViewBag.Player = Session["Player"];
+            ViewBag.Monster = Session["Monster"];
             return View();
         }
     }
